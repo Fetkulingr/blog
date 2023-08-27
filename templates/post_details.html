@@ -1,0 +1,17 @@
+{% extends 'base.html' %}  <!-- Расширение базового шаблона 'base.html' -->
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block body %}  <!-- Блок с основным содержимым страницы -->
+<div class="container">  <!-- Контейнер для выравнивания содержимого -->
+    <h1>{{ article.title }}</h1>  <!-- Заголовок раздела -->
+    <div class="alert alert-info">
+        <p>{{ article.text }}</p>
+        <p><b>Дата: {{ article.date.date() }}</b></p>
+        <a href="/posts/{{ article.id }}/delete" class="btn btn-danger">Удалить запись</a>
+        <a href="/posts/{{ article.id }}/update" class="btn btn-success">Изменить запись</a>
+    </div>
+</div>
+{% endblock %}  <!-- Закрытие блока с основным содержимым страницы -->
