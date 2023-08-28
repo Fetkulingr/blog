@@ -1,3 +1,4 @@
+Проверь ошибки:
 {% extends 'base.html' %}  <!-- Расширение базового шаблона 'base.html' -->
 
 {% block title %}
@@ -7,6 +8,7 @@
 {% block body %}  <!-- Блок с основным содержимым страницы -->
 <div class="container">  <!-- Контейнер для выравнивания содержимого -->
     <h1>Добавление статьи</h1>
+    <form method="post" onsubmit="showNotification()"><form method="post" onsubmit="showNotification()">
     <form method="post">  <!-- Форма для отправки данных -->
         <input type="text" name="title" id="title" class="form-control" placeholder="Введите заголовок статьи"><br>  <!-- Поле ввода заголовка статьи -->
         <textarea name="intro" id="into" class="form-control" placeholder="Введите краткое описание"></textarea><br>  <!-- Поле ввода краткого описания статьи -->
